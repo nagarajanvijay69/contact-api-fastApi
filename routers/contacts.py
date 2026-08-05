@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from schemas import ContactCreate, ContactUpdate, ContactResponse
 from models import Contact
 from sqlalchemy import select
-from pydantic import BaseModel, Field
-from database import Base, engine, Session, get_db
+from database import get_db
+from sqlalchemy.orm import Session
 
 
 contactRoute = APIRouter()
